@@ -34,7 +34,7 @@ class Token(BaseModel):
 class URLCreate(BaseModel):
     url:AnyHttpUrl
     title:str=Field(min_length=1,max_length=100)
-    expires_in_days:int| None=Field(default=None)
+    expires_in_days:int| None=Field(default=None,ge=1,le=3650)
     alias:Optional[str]=Field(default=None,min_length=3,max_length=32,pattern=r"^[A-Za-z0-9_-]+$")
 
     model_config = ConfigDict(
