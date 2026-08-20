@@ -16,6 +16,7 @@ class Settings(BaseSettings):
     domain_name:str ="localhost:8000"
     expires_in_days:int=30
     redis_url:str
+    env:str
 
 
 settings=Settings()
