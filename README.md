@@ -2,6 +2,15 @@
 
 An API-first URL shortening service built with **FastAPI**, **PostgreSQL**, **Redis**, and **async SQLAlchemy**.
 
+## Live Demo
+
+https://linkly-shortener.onrender.com
+
+> **Note:** The live API is deployed on Render's free tier. After a period of inactivity, the service may spin down and the first request can take about a minute while it starts back up.
+
+> **Password reset:** The password-reset flow is fully implemented and works out of the box in local/Docker deployments. The live Render free-tier deployment cannot send SMTP traffic because Render blocks outbound SMTP ports `25`, `465`, and `587` on free web services. Email delivery therefore does not work on the live demo without using an external email API or a paid Render instance. citeturn776759search0turn776759search1
+
+
 The service provides authenticated URL management, custom aliases, expiration, click tracking, analytics, Redis-backed redirect caching, rate limiting, pagination, and Dockerized development/testing.
 
 ## Features
