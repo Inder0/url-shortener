@@ -17,6 +17,11 @@ class Settings(BaseSettings):
     expires_in_days:int=30
     redis_url:str
     env:str
+    mail_username: str
+    mail_password: SecretStr
+    mail_from: str
+    reset_token_expire_mins:int=60
+
 
 
 settings=Settings()

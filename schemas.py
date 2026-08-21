@@ -96,4 +96,10 @@ class PaginatedURLs(BaseModel):
     total_pages:int
     results:list[URLWithClicks]
 
+class ForgotPasswordRequest(BaseModel):
+    email:EmailStr=Field(max_length=120)
 
+
+class ResetPasswordRequest(BaseModel):
+    token:str
+    new_password:str=Field(min_length=8)
